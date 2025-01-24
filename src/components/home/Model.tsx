@@ -34,6 +34,7 @@ const TorusKnot = ({
     const ref = useRef();
 
     const [hovered, setHovered] = useState(false);
+    const [clicked, setClicked] = useState(false);
 
     useFrame((state, delta) => {
         const speed = hovered ? 1 : 0.2;
@@ -50,6 +51,8 @@ const TorusKnot = ({
                 event.stopPropagation(), setHovered(true)
             )}
             onPointerLeave={() => setHovered(false)}
+            onClick={() => setClicked((prev) => !prev)}
+            scale={clicked ? 1.5 : 1}
         >
             <torusKnotGeometry args={size} />
             <meshStandardMaterial color={hovered ? "white" : color} wireframe />
