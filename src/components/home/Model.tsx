@@ -48,9 +48,10 @@ const TorusKnot = ({
         <mesh
             position={position}
             ref={ref}
-            onPointerEnter={(event) => (
-                event.stopPropagation(), setHovered(true)
-            )}
+            onPointerEnter={(event) => {
+                event.stopPropagation();
+                setHovered(true);
+            }}
             onPointerLeave={() => setHovered(false)}
             onClick={() => setClicked((prev) => !prev)}
             scale={clicked ? 1.5 : 1}
