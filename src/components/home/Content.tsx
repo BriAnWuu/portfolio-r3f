@@ -65,7 +65,7 @@ export default function Content() {
     });
 
     return (
-        <div ref={ref} className="relative w-full h-screen border border-white">
+        <div ref={ref} className="relative w-full h-screen">
             <Section
                 transformation={transformation[0]}
                 scrollProgress={smoothScrollProgress}
