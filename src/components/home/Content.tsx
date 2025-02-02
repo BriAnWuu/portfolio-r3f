@@ -3,7 +3,12 @@
 import clsx from "clsx";
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { useRef } from "react";
-import { AboutSection, ContactSection, WorkSection } from "./ContentSection";
+import {
+    AboutSection,
+    ContactSection,
+    TechSection,
+    WorkSection,
+} from "./ContentSection";
 
 type keyframeProps = {
     id: number;
@@ -39,6 +44,13 @@ const transformation: keyframeProps[] = [
         xKeyframe: [0.2, 0.5],
         x: [-100, 0],
     },
+    {
+        id: 3,
+        opacityKeyframe: [0.2, 0.5],
+        opacity: [0, 1],
+        xKeyframe: [0.2, 0.5],
+        x: [-100, 0],
+    },
 ];
 
 export default function Content({}) {
@@ -53,7 +65,7 @@ export default function Content({}) {
     });
 
     return (
-        <div ref={ref} className="relative w-full h-screen">
+        <div ref={ref} className="relative w-full h-screen border border-white">
             <Section
                 transformation={transformation[0]}
                 scrollProgress={smoothScrollProgress}
@@ -74,6 +86,13 @@ export default function Content({}) {
                 position={"left-16 bottom-1/2"}
             >
                 <ContactSection />
+            </Section>
+            <Section
+                transformation={transformation[3]}
+                scrollProgress={smoothScrollProgress}
+                position={"left-20 bottom-16"}
+            >
+                <TechSection />
             </Section>
         </div>
     );

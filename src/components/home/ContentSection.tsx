@@ -1,3 +1,5 @@
+import TechIcons from "../TechIcons";
+
 export function AboutSection({}) {
     return (
         <>
@@ -5,6 +7,10 @@ export function AboutSection({}) {
             <p className="text-md">I'm body paragraph box</p>
         </>
     );
+}
+
+export function TechSection({}) {
+    return <TechIcons />;
 }
 
 export function WorkSection({}) {
