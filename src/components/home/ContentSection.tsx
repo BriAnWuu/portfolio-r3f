@@ -10,7 +10,12 @@ export function AboutSection({}) {
 }
 
 export function TechSection({}) {
-    return <TechIcons />;
+    return (
+        <>
+            <h2 className="text-lg">My Tech Stack</h2>
+            <TechIcons />
+        </>
+    );
 }
 
 export function WorkSection({}) {

@@ -53,7 +53,7 @@ const transformation: keyframeProps[] = [
     },
 ];
 
-export default function Content({}) {
+export default function Content() {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
