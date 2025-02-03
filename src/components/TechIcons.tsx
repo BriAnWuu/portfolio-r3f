@@ -1,29 +1,36 @@
 import clsx from "clsx";
+import MagneticWrapper from "./MagneticWrapper";
 
 const iconClass =
     "w-10 h-10 transition-all duration-300 grayscale hover:grayscale-0";
 
+const iconList = [
+    <PythonIcon />,
+    <ReactIcon />,
+    <NextIcon />,
+    <JavascriptIcon />,
+    <TypescriptIcon />,
+    <HtmlIcon />,
+    <CssIcon />,
+    <SassIcon />,
+    <TailwindIcon />,
+    <GitIcon />,
+    <MySQLIcon />,
+    <SQLiteIcon />,
+    <DockerIcon />,
+    <AWSIcon />,
+    <AzureIcon />,
+    <NodeIcon />,
+    <SocketIcon />,
+    <ThreeIcon />,
+];
+
 export default function TechIcons() {
     return (
-        <div className="flex">
-            <PythonIcon />
-            <ReactIcon />
-            <NextIcon />
-            <JavascriptIcon />
-            <TypescriptIcon />
-            <HtmlIcon />
-            <CssIcon />
-            <SassIcon />
-            <TailwindIcon />
-            <GitIcon />
-            <MySQLIcon />
-            <SQLiteIcon />
-            <DockerIcon />
-            <AWSIcon />
-            <AzureIcon />
-            <NodeIcon />
-            <SocketIcon />
-            <ThreeIcon />
+        <div className="flex gap-4">
+            {iconList.map((icon, idx) => (
+                <MagneticWrapper key={idx}>{icon}</MagneticWrapper>
+            ))}
         </div>
     );
 }

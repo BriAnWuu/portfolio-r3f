@@ -1,6 +1,5 @@
 import { useFrame, useThree } from "@react-three/fiber";
 import { useRef, useState } from "react";
-import { Vector3 } from "three";
 
 type Props = {
     // figure out their types later :)
