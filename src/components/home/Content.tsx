@@ -25,28 +25,28 @@ type scrollProgressProps = {
 const transformation: keyframeProps[] = [
     {
         id: 0,
-        opacityKeyframe: [0.1, 0.5],
+        opacityKeyframe: [0.3, 0.6],
         opacity: [0, 1],
         xKeyframe: [0.1, 0.5],
         x: [200, 0],
     },
     {
         id: 1,
-        opacityKeyframe: [0, 0.5],
+        opacityKeyframe: [0.3, 0.6],
         opacity: [0, 1],
         xKeyframe: [0, 0.5],
         x: [100, 0],
     },
     {
         id: 2,
-        opacityKeyframe: [0.2, 0.5],
+        opacityKeyframe: [0.3, 0.6],
         opacity: [0, 1],
         xKeyframe: [0.2, 0.5],
         x: [-100, 0],
     },
     {
         id: 3,
-        opacityKeyframe: [0.2, 0.5],
+        opacityKeyframe: [0.3, 0.6],
         opacity: [0, 1],
         xKeyframe: [0.2, 0.5],
         x: [-100, 0],
@@ -65,7 +65,7 @@ export default function Content() {
     });
 
     return (
-        <div ref={ref} className="relative w-full h-screen">
+        <div ref={ref} className="relative w-full h-[150vh]">
             <Section
                 transformation={transformation[0]}
                 scrollProgress={smoothScrollProgress}
@@ -112,7 +112,10 @@ const Section = ({ children, transformation, scrollProgress, position }) => {
 
     return (
         <motion.section
-            style={{ opacity: opacity, x: x }}
+            style={{
+                opacity: opacity,
+                x: x,
+            }}
             className={clsx("absolute", position)}
         >
             {children}
