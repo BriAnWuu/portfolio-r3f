@@ -13,7 +13,6 @@ export default function Home() {
                     <Scene />
                 </div>
                 <Content />
-                <Hero />
             </div>
         </main>
     );

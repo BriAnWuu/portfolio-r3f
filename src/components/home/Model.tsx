@@ -12,6 +12,8 @@ const Cube = ({ position, size, color }: Props) => {
     const ref = useRef();
 
     useFrame((state, delta) => {
+        if (!ref.current) return;
+
         ref.current.rotation.x += delta;
         ref.current.rotation.y += delta * 2;
         ref.current.position.z = Math.sin(state.clock.elapsedTime) * 1.5;
@@ -36,6 +38,8 @@ const TorusKnot = ({
     const [clicked, setClicked] = useState(false);
 
     useFrame((state, delta) => {
+        if (!ref.current) return;
+
         const speed = hovered ? 1.5 : 1;
         ref.current.rotation.x += delta * speed;
         // ref.current.rotation.y += delta * 2;

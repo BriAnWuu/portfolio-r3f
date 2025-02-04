@@ -2,7 +2,7 @@ import clsx from "clsx";
 import MagneticWrapper from "./MagneticWrapper";
 
 const iconClass =
-    "w-10 h-10 transition-all duration-300 grayscale hover:grayscale-0";
+    "size-10 transition-all duration-300 grayscale hover:grayscale-0";
 
 const iconList = [
     <PythonIcon />,
@@ -27,7 +27,7 @@ const iconList = [
 
 export default function TechIcons() {
     return (
-        <div className="flex gap-4">
+        <div className="w-1/2 flex flex-wrap gap-4">
             {iconList.map((icon, idx) => (
                 <MagneticWrapper key={idx}>{icon}</MagneticWrapper>
             ))}
