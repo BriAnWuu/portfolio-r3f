@@ -1,5 +1,7 @@
 import Footer from "@/components/footer/Footer";
+import LeftSideBar from "@/components/LeftSideBar";
 import NavBar from "@/components/nav/NavBar";
+import clsx from "clsx";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -31,10 +33,17 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                className={clsx(
+                    "antialiased",
+                    geistSans.variable,
+                    geistMono.variable
+                )}
             >
                 <NavBar />
-                {children}
+                <div className="relative w-full">
+                    <LeftSideBar />
+                    {children}
+                </div>
                 <Footer />
             </body>
         </html>

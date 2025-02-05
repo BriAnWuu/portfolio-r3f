@@ -1,6 +1,5 @@
 import Link from "next/link";
-import BreakLine from "../BreakLine";
-import { EmailIcon, GithubIcon, LinkedInIcon } from "../Icons";
+import { EmailIcon, GithubIcon, LinkedInIcon } from "../SocialLogos";
 import Contact from "./Contact";
 
 export default function Footer() {
