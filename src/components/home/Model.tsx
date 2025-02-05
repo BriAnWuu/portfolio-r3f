@@ -9,25 +9,6 @@ type Props = {
     color?: string;
 };
 
-// const Cube = ({ position, size, color }: Props) => {
-//     const ref = useRef();
-
-//     useFrame((state, delta) => {
-//         if (!ref.current) return;
-
-//         ref.current.rotation.x += delta;
-//         ref.current.rotation.y += delta * 2;
-//         ref.current.position.z = Math.sin(state.clock.elapsedTime) * 1.5;
-//     });
-
-//     return (
-//         <mesh position={position} ref={ref}>
-//             <boxGeometry args={size} />
-//             <meshStandardMaterial color={color} />
-//         </mesh>
-//     );
-// };
-
 const TorusKnot = ({ position = [0, 0, 0], size = [1, 1, 1, 1] }: Props) => {
     const ref = useRef();
 
@@ -40,8 +21,7 @@ const TorusKnot = ({ position = [0, 0, 0], size = [1, 1, 1, 1] }: Props) => {
 
         const speed = hovered ? 0.7 : 1;
         ref.current.rotation.x += delta * speed;
-        ref.current.position.z =
-            Math.sin(state.clock.elapsedTime * speed) * 1.5;
+        ref.current.position.z = Math.sin(state.clock.elapsedTime) * 1.5;
     });
 
     return (
@@ -58,7 +38,7 @@ const TorusKnot = ({ position = [0, 0, 0], size = [1, 1, 1, 1] }: Props) => {
                 setHovered(false);
                 setColor(getRandomColor());
             }}
-            // scale={clicked ? 1.5 : 1}
+            scale={1.5}
         >
             <torusKnotGeometry args={size} />
             <meshStandardMaterial color={hovered ? "white" : color} wireframe />
@@ -71,10 +51,6 @@ export default function Model() {
 
     return (
         <group position={[0, 0, -5]} scale={viewport.width / 3}>
-            {/* <Cube position={[1, 0, 0]} size={[1, 1, 1]} color="blue" />
-            <Cube position={[-1, 0, 0]} size={[1, 1, 1]} color="red" />
-            <Cube position={[1, 2, 0]} size={[1, 1, 1]} color="green" />
-            <Cube position={[-1, 2, 0]} size={[1, 1, 1]} color="yellow" /> */}
             <TorusKnot size={[0.5, 0.1, 100, 16]} />
         </group>
     );

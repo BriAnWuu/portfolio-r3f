@@ -1,6 +1,6 @@
 import TechIcons from "../TechIcons";
 
-export function AboutSection({}) {
+export function AboutSection() {
     return (
         <>
             <h1 className="text-xl">About</h1>
@@ -9,7 +9,7 @@ export function AboutSection({}) {
     );
 }
 
-export function TechSection({}) {
+export function TechSection() {
     return (
         <>
             <h2 className="text-lg">My Tech Stack</h2>
@@ -18,7 +18,7 @@ export function TechSection({}) {
     );
 }
 
-export function WorkSection({}) {
+export function WorkSection() {
     return (
         <>
             <h2 className="text-lg">Work</h2>
@@ -28,13 +28,23 @@ export function WorkSection({}) {
     );
 }
 
-export function ContactSection({}) {
+export function ContactSection() {
     return (
         <>
             <h2 className="text-md">Contact</h2>
             <p className="text-sm">I'm body paragraph box 1</p>
             <p className="text-sm">I'm body paragraph box 2</p>
             <p className="text-sm">I'm body paragraph box 3</p>
+        </>
+    );
+}
+
+export function ExperienceSection() {
+    return (
+        <>
+            <h2 className="text-lg">Experience</h2>
+            <p className="text-sm">I'm body paragraph box 1</p>
+            <p className="text-sm">I'm body paragraph box 2</p>
         </>
     );
 }
