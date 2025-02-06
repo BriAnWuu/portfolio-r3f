@@ -46,7 +46,6 @@ const SectionWrapper = ({
             y: 0,
         },
     };
-
     const transition = {
         delay: 0.3,
         duration: 0.4,

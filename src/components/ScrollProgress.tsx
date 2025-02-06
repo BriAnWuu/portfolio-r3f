@@ -20,7 +20,7 @@ export default function ScrollProgress({ children }: PropsWithChildren) {
     return (
         <div ref={ref} className="relative w-full">
             <svg
-                className="sticky top-[90vh] left-[95vw] size-12 -rotate-90 mb-8"
+                className="sticky top-[90vh] left-[95vw] size-12 -rotate-90 mb-8 z-10"
                 viewBox="0 0 100 100"
             >
                 <circle

@@ -12,9 +12,9 @@ export default function Footer() {
             <div className="w-full flex flex-col gap-8 px-16 py-8 border-y-2 border-gray-500 md:flex-row">
                 <div className="flex-1 flex flex-col gap-4 pr-8 border-r-2 border-gray-500">
                     <Link href="/">brianwu.</Link>
-                    <p>Toronto, ON, CAN</p>
-                    <p>Los Angeles, CA, USA</p>
-                    <p>Taipei, TAIWAN</p>
+                    <p>Toronto</p>
+                    <p>Los Angeles</p>
+                    <p>Taipei</p>
                 </div>
                 {/* <BreakLine isHorizontal={false} /> */}
                 <div className="flex-1 flex flex-col gap-4 pr-8 border-r-2 border-gray-500">
