@@ -9,6 +9,7 @@ import {
     useTransform,
 } from "motion/react";
 import { ReactNode, useRef } from "react";
+import ScrollProgress from "../ScrollProgress";
 import {
     AboutSection,
     ExperienceSection,
@@ -17,18 +18,8 @@ import {
 } from "./ContentSection";
 
 export default function Content() {
-    const ref = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start 0.8", "end end"],
-    });
-    const smoothScrollProgress = useSpring(scrollYProgress, {
-        damping: 10,
-        stiffness: 300,
-    });
-
     return (
-        <div ref={ref} className="relative w-full bottom-1 h-[150vh]">
+        <div className="relative w-full bottom-1 h-[150vh]">
             <SectionWrapper position={"top-[5%] left-[15%]"}>
                 <AboutSection />
             </SectionWrapper>
@@ -81,7 +72,7 @@ const SectionWrapper = ({
             whileInView="inView"
             transition={transition}
             viewport={{
-                once: true,
+                // once: true,
                 margin: "0px 0px -7.5% 0px",
             }}
         >

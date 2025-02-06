@@ -1,6 +1,7 @@
 import Footer from "@/components/footer/Footer";
 import LeftSideBar from "@/components/LeftSideBar";
 import NavBar from "@/components/nav/NavBar";
+import ScrollProgress from "@/components/ScrollProgress";
 import clsx from "clsx";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -31,7 +32,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" className="no-scrollbar">
             <body
                 className={clsx(
                     "antialiased",
@@ -40,10 +41,11 @@ export default function RootLayout({
                 )}
             >
                 <NavBar />
-                <div className="relative w-full">
+                <ScrollProgress>
                     <LeftSideBar />
                     {children}
-                </div>
+                </ScrollProgress>
+
                 <Footer />
             </body>
         </html>

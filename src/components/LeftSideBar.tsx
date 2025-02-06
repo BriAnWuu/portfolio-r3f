@@ -13,7 +13,7 @@ export default function LeftSideBar() {
                     <EmailLogo size={iconSize} />
                 </div>
 
-                <div className="w-[2px] h-[50px] bg-gray-500 mb-5"></div>
+                <div className="w-[2px] h-[50px] bg-gray-500 mb-8"></div>
 
                 <div className="flex flex-col items-center gap-10">
                     <Link href="/" className="-rotate-90 text-sm mb-4">
