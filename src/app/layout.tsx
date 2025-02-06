@@ -41,6 +41,7 @@ export default function RootLayout({
                 )}
             >
                 <NavBar />
+
                 <ScrollProgress>
                     <LeftSideBar />
                     {children}

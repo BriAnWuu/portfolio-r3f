@@ -1,15 +1,8 @@
 "use client";
 
 import clsx from "clsx";
-import {
-    motion,
-    MotionValue,
-    useScroll,
-    useSpring,
-    useTransform,
-} from "motion/react";
-import { ReactNode, useRef } from "react";
-import ScrollProgress from "../ScrollProgress";
+import { motion } from "motion/react";
+import { ReactNode } from "react";
 import {
     AboutSection,
     ExperienceSection,

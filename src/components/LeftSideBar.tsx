@@ -16,6 +16,7 @@ export default function LeftSideBar() {
                 <div className="w-[2px] h-[50px] bg-gray-500 mb-8"></div>
 
                 <div className="flex flex-col items-center gap-10">
+                    {/* toggle dark/light theme, custom accent color, disable animation, etc. */}
                     <Link href="/" className="-rotate-90 text-sm mb-4">
                         Placeholder
                     </Link>
