@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { EmailIcon, GithubIcon, LinkedInIcon } from "../SocialLogos";
+import { EmailLogo, GithubLogo, LinkedInLogo } from "../SocialLogos";
 import Contact from "./Contact";
 
 export default function Footer() {
@@ -30,9 +30,9 @@ export default function Footer() {
                 </div>
                 {/* <BreakLine isHorizontal={false} /> */}
                 <div className="flex-1 flex gap-8">
-                    <LinkedInIcon size={iconSize} />
-                    <GithubIcon size={iconSize} />
-                    <EmailIcon size={iconSize} />
+                    <LinkedInLogo size={iconSize} />
+                    <GithubLogo size={iconSize} />
+                    <EmailLogo size={iconSize} />
                 </div>
             </div>
             {/* <BreakLine /> */}
