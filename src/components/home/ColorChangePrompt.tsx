@@ -26,7 +26,7 @@ export default function ColorChangePrompt() {
 
     return (
         <motion.div
-            className="absolute top-[50vh] left-[92%] z-1 flex gap-2 items-end"
+            className="absolute top-[50vh] right-[-40px] z-1 flex gap-2 items-end"
             variants={variants}
             initial="initial"
             whileInView="inView"

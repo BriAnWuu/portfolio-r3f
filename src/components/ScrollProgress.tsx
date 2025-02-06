@@ -19,25 +19,27 @@ export default function ScrollProgress({ children }: PropsWithChildren) {
 
     return (
         <div ref={ref} className="relative w-full">
-            <svg
-                className="sticky top-[90vh] left-[95vw] size-12 -rotate-90 mb-8 z-10"
-                viewBox="0 0 100 100"
-            >
-                <circle
-                    className={clsx(circleClass, "stroke-gray-500")}
-                    cx="50"
-                    cy="50"
-                    r="30"
-                    pathLength="1"
-                />
-                <motion.circle
-                    className={clsx(circleClass, "stroke-white")}
-                    cx="50"
-                    cy="50"
-                    r="30"
-                    style={{ pathLength: smoothScrollProgress }}
-                />
-            </svg>
+            <div className="w-1/10 h-full absolute top-0 right-0 pr-2 pt-[5%] pb-12">
+                <svg
+                    className="sticky top-[87%] right-0 size-12 -rotate-90 z-10"
+                    viewBox="0 0 100 100"
+                >
+                    <circle
+                        className={clsx(circleClass, "stroke-gray-500")}
+                        cx="50"
+                        cy="50"
+                        r="30"
+                        pathLength="1"
+                    />
+                    <motion.circle
+                        className={clsx(circleClass, "stroke-white")}
+                        cx="50"
+                        cy="50"
+                        r="30"
+                        style={{ pathLength: smoothScrollProgress }}
+                    />
+                </svg>
+            </div>
             {children}
         </div>
     );
