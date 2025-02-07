@@ -7,7 +7,7 @@ const Scene = dynamic(() => import("@/components/home/Scene"), { ssr: false });
 
 export default function Home() {
     return (
-        <main className="w-screen h-[400vh] flex flex-col gap-8 items-center">
+        <main className="w-screen h-fit flex flex-col gap-8 items-center">
             <Hero />
             <div className="relative w-full h-[300vh]">
                 <ColorChangePrompt />

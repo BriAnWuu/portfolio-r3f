@@ -1,7 +1,11 @@
+import HeaderMask from "../HeaderMask";
+
 export default function Hero({}) {
     return (
-        <section className="flex flex-col w-screen h-screen justify-center items-center ">
-            <h1 className="text-4xl">Welcome.</h1>
+        <section className="flex flex-col w-screen justify-center items-center overflow-hidden">
+            <HeaderMask>
+                <h1 className="text-4xl text-zinc-800">Welcome.</h1>
+            </HeaderMask>
             <p className="flex flex-col flex-wrap justify-center items-center w-[90%] sm:max-w-lg">
                 I'm Brian. A software engineer, maker and problem solver.
                 <span className="flex flex-wrap">

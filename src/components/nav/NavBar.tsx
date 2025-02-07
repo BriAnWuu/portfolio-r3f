@@ -1,10 +1,9 @@
-import BreakLine from "../BreakLine";
 import NavLink from "./NavLink";
 
 export default function NavBar({}) {
     return (
         <nav className="w-full">
-            <div className="flex justify-between w-full px-16 py-8">
+            <div className="flex justify-between w-full px-16 py-8 border-b-2 border-gray-500">
                 <div className="flex">
                     <NavLink href={"/"}>Home</NavLink>
                 </div>
@@ -14,7 +13,6 @@ export default function NavBar({}) {
                     <NavLink href="/contact">Contact</NavLink>
                 </div>
             </div>
-            <BreakLine />
         </nav>
     );
 }
