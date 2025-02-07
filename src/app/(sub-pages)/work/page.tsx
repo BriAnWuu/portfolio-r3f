@@ -1,4 +1,4 @@
-import Placeholder from "@/components/Placeholder";
+import Hero from "@/components/work/Hero";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function Work({}) {
     return (
         <>
-            <Placeholder />
+            <Hero />
         </>
     );
 }

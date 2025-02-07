@@ -12,7 +12,7 @@ export default function HeaderMask({ children }: PropsWithChildren) {
     };
     const titleVariants = {
         initial: {
-            y: 300,
+            y: 100,
             opacity: 0,
         },
         animate: { y: 0, opacity: 1 },
@@ -32,8 +32,8 @@ export default function HeaderMask({ children }: PropsWithChildren) {
         ease: "easeInOut",
         type: "spring",
         mass: 1,
-        damping: 10,
-        stiffness: 150,
+        damping: 30,
+        stiffness: 100,
     };
 
     return (
