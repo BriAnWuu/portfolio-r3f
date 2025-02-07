@@ -12,7 +12,7 @@ import {
 
 export default function Content() {
     return (
-        <div className="relative w-full bottom-1 h-[150vh]">
+        <div className="relative w-full bottom-1 h-[200vh]">
             <SectionWrapper position={"top-[5%] left-[15%]"}>
                 <AboutSection />
             </SectionWrapper>
