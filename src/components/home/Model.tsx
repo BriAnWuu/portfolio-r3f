@@ -10,16 +10,14 @@ type Props = {
 };
 
 const TorusKnot = ({ position = [0, 0, 0], size = [1, 1, 1, 1] }: Props) => {
-    const ref = useRef();
+    const ref = useRef(null);
 
     const [color, setColor] = useState("orange");
     const [hovered, setHovered] = useState(false);
     // const [clicked, setClicked] = useState(false);
 
     useFrame((state, delta) => {
-        if (!ref.current) return;
-
-        const speed = hovered ? 0.7 : 1;
+        const speed = hovered ? 0.5 : 1;
         ref.current.rotation.x += delta * speed;
         ref.current.position.z = Math.sin(state.clock.elapsedTime) * 1.5;
     });

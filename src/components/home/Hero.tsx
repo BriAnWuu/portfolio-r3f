@@ -6,7 +6,7 @@ export default function Hero({}) {
             <HeaderMask>
                 <h1 className="text-4xl text-zinc-800">Welcome.</h1>
             </HeaderMask>
-            <p className="flex flex-col flex-wrap justify-center items-center w-[90%] sm:max-w-lg">
+            <p className="flex flex-col flex-wrap justify-center items-center w-[90%] gap-2 sm:max-w-lg">
                 I'm Brian. A software engineer, maker and problem solver.
                 <span className="flex flex-wrap">
                     Numbers, math, and programming have always fascinated me and
