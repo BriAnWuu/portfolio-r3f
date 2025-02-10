@@ -5,7 +5,7 @@ const iconSize = 18;
 
 export default function LeftSideBar() {
     return (
-        <section className="w-1/10 h-full absolute top-0 left-0 pl-2 pt-[5%] pb-12 z-10">
+        <section className="w-1/10 h-full absolute top-0 left-0 pl-2 pt-[5%] pb-12 z-20">
             <div className="sticky min-h-[512px] top-[5%] left-0 flex flex-col justify-between items-center gap-4">
                 <div className="flex flex-col gap-2 mb-auto">
                     <GithubLogo size={iconSize} />

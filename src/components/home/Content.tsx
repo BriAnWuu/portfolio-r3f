@@ -1,6 +1,5 @@
 "use client";
 
-import clsx from "clsx";
 import { motion } from "motion/react";
 import { ReactNode } from "react";
 import {
@@ -8,34 +7,28 @@ import {
     ExperienceSection,
     TechSection,
     WorkSection,
-} from "./ContentSection";
+} from "./Sections";
 
 export default function Content() {
     return (
-        <div className="relative w-full bottom-1 h-[200vh]">
-            <SectionWrapper position={"top-[5%] left-[15%]"}>
+        <div className="relative w-full h-[200vh] flex flex-col gap-16 px-[15%] py-16 z-10 [&>*:nth-child(even)]:self-end [&>*:nth-child(even)]:items-end [&>*:nth-child(even)>*]:justify-end">
+            <SectionWrapper>
                 <AboutSection />
             </SectionWrapper>
-            <SectionWrapper position={"top-[20%] left-[15%]"}>
+            <SectionWrapper>
                 <WorkSection />
             </SectionWrapper>
-            <SectionWrapper position={"top-[35%] left-[15%]"}>
+            <SectionWrapper>
                 <ExperienceSection />
             </SectionWrapper>
-            <SectionWrapper position={"top-[50%] left-[15%]"}>
+            <SectionWrapper>
                 <TechSection />
             </SectionWrapper>
         </div>
     );
 }
 
-const SectionWrapper = ({
-    children,
-    position,
-}: {
-    children: ReactNode;
-    position: string;
-}) => {
+const SectionWrapper = ({ children }: { children: ReactNode }) => {
     const variants = {
         initial: {
             opacity: 0,
@@ -58,7 +51,7 @@ const SectionWrapper = ({
 
     return (
         <motion.section
-            className={clsx("absolute", position)}
+            className={`w-[90%] sm:max-w-xl flex flex-col`}
             variants={variants}
             initial="initial"
             whileInView="inView"

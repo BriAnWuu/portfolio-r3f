@@ -29,7 +29,7 @@ const iconList = [
 
 export default function TechIcons() {
     return (
-        <div className="w-1/2 flex flex-wrap gap-4">
+        <div className="w-full flex flex-wrap gap-4">
             {iconList.map((icon, idx) => (
                 <MagneticWrapper key={idx}>{icon}</MagneticWrapper>
             ))}
