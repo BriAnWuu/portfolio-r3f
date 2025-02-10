@@ -31,9 +31,9 @@ export default function MagneticWrapper({ children }: PropsWithChildren) {
             animate={{ x, y }}
             transition={{
                 type: "spring",
-                mass: 0.5,
+                mass: 1,
                 damping: 5,
-                stiffness: 150,
+                stiffness: 200,
             }}
         >
             {children}

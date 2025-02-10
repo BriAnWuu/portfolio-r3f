@@ -23,6 +23,8 @@ const iconList = [
     <NodeIcon />,
     <SocketIcon />,
     <ThreeIcon />,
+    <TensorFlowIcon />,
+    <PyTorchIcon />,
 ];
 
 export default function TechIcons() {
@@ -661,6 +663,49 @@ export function HtmlIcon() {
             <path
                 fill="#fff"
                 d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z"
+            />
+        </svg>
+    );
+}
+
+export function TensorFlowIcon() {
+    return (
+        <svg
+            className={iconClass}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 128 128"
+            role="img"
+            aria-labelledby="iconTensorFlow"
+        >
+            <title id="iconTensorFlow">TensorFlow</title>
+            <path
+                d="m61.55 128-21.84-12.68V40.55L6.81 59.56l.08-28.32L61.55 0zM66.46 0v128l21.84-12.68V79.31l16.49 9.53-.1-24.63-16.39-9.36v-14.3l32.89 19.01-.08-28.32z"
+                fill="#ff6f00"
+            />
+        </svg>
+    );
+}
+
+export function PyTorchIcon() {
+    return (
+        <svg
+            className={iconClass}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 128 128"
+            role="img"
+            aria-labelledby="iconPyTorch"
+        >
+            <title id="iconPyTorch">PyTorch</title>
+            <path
+                fill="#EE4C2C"
+                d="M100.1 38.3l-9.2 9.2c15.1 15.1 15.1 39.4 0 54.3-15.1 15.1-39.4 15.1-54.3 0-15.1-15.1-15.1-39.4 0-54.3l24-24 3.4-3.4V2L27.8 38.2C7.7 58.3 7.7 90.8 27.8 111s52.6 20.1 72.4 0c20.1-20.2 20.1-52.5-.1-72.7z"
+            />
+            <circle
+                fill="#EE4C2C"
+                transform="rotate(-88.939 82.069 29.398) scale(.99997)"
+                cx="82.1"
+                cy="29.4"
+                r="6.7"
             />
         </svg>
     );

@@ -1,10 +1,21 @@
 import TechIcons from "../TechIcons";
 
+const textColor = "text-gray-200";
+const accentTextColor = "text-white";
+
+const titleClass = `text-xl ${textColor} mb-4`;
+const paragraphClass = `text-md ${textColor}`;
+const strongClass = `${accentTextColor}`;
+
 export function AboutSection() {
     return (
         <>
-            <h1 className="text-xl">About</h1>
-            <p className="text-md">I'm body paragraph box</p>
+            <h3 className={titleClass}>About</h3>
+            <p className={paragraphClass}>
+                I have a background in{" "}
+                <strong className={strongClass}>Computer Science</strong> and{" "}
+                <strong className={strongClass}>Quantitative Finance</strong>.
+            </p>
         </>
     );
 }
@@ -12,7 +23,7 @@ export function AboutSection() {
 export function TechSection() {
     return (
         <>
-            <h2 className="text-lg">My Tech Stack</h2>
+            <h3 className={titleClass}>My Tech Stack</h3>
             <TechIcons />
         </>
     );
@@ -21,9 +32,9 @@ export function TechSection() {
 export function WorkSection() {
     return (
         <>
-            <h2 className="text-lg">Work</h2>
-            <p className="text-md">I'm body paragraph box 1</p>
-            <p className="text-md">I'm body paragraph box 2</p>
+            <h3 className={titleClass}>Work</h3>
+            <p className={paragraphClass}>I'm body paragraph box 1</p>
+            <p className={paragraphClass}>I'm body paragraph box 2</p>
         </>
     );
 }
@@ -31,9 +42,9 @@ export function WorkSection() {
 export function ExperienceSection() {
     return (
         <>
-            <h2 className="text-lg">Experience</h2>
-            <p className="text-sm">I'm body paragraph box 1</p>
-            <p className="text-sm">I'm body paragraph box 2</p>
+            <h3 className={titleClass}>Experience</h3>
+            <p className={paragraphClass}>I'm body paragraph box 1</p>
+            <p className={paragraphClass}>I'm body paragraph box 2</p>
         </>
     );
 }

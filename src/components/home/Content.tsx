@@ -64,7 +64,7 @@ const SectionWrapper = ({
             whileInView="inView"
             transition={transition}
             viewport={{
-                // once: true,
+                once: true,
                 margin: "0px 0px -7.5% 0px",
             }}
         >
