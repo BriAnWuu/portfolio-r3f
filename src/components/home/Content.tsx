@@ -11,7 +11,7 @@ import {
 
 export default function Content() {
     return (
-        <div className="relative w-full h-[200vh] flex flex-col gap-16 px-[15%] py-16 z-10 [&>*:nth-child(even)]:self-end [&>*:nth-child(even)]:items-end [&>*:nth-child(even)>*]:justify-end">
+        <div className="relative w-full h-[200vh] max-w-6xl flex flex-col gap-16 px-[15%] lg:px-24 py-8 z-10 [&>*:nth-child(even)]:self-end [&>*:nth-child(even)]:items-end [&>*:nth-child(even)>*]:justify-end">
             <SectionWrapper>
                 <AboutSection />
             </SectionWrapper>
@@ -51,7 +51,7 @@ const SectionWrapper = ({ children }: { children: ReactNode }) => {
 
     return (
         <motion.section
-            className={`w-[90%] sm:max-w-xl flex flex-col`}
+            className={`w-[80%] flex flex-col`}
             variants={variants}
             initial="initial"
             whileInView="inView"

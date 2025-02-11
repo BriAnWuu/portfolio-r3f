@@ -5,6 +5,7 @@ export default function Projects({}) {
         <div className="w-full flex gap-4">
             <ProjectCard />
             <ProjectCard />
+            <ProjectCard />
         </div>
     );
 }
