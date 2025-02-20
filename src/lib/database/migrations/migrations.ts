@@ -5,19 +5,19 @@ export async function up(db: Kysely<any>): Promise<void> {
         .createTable("project")
         .ifNotExists()
         .addColumn("id", "integer", (col) => col.primaryKey())
-        .addColumn("title", "varchar", (col) => col.notNull())
-        .addColumn("description", "varchar")
-        .addColumn("image_url", "varchar", (col) => col.notNull())
+        .addColumn("title", "varchar(255)", (col) => col.notNull())
+        .addColumn("description", "text")
+        .addColumn("image_url", "varchar(255)", (col) => col.notNull())
         .execute();
 
     await db.schema
         .createTable("experience")
         .ifNotExists()
         .addColumn("id", "integer", (col) => col.primaryKey())
-        .addColumn("role", "varchar", (col) => col.notNull())
-        .addColumn("company", "varchar", (col) => col.notNull())
-        .addColumn("location", "varchar", (col) => col.notNull())
-        .addColumn("industry", "varchar", (col) => col.notNull())
+        .addColumn("role", "varchar(255)", (col) => col.notNull())
+        .addColumn("company", "varchar(255)", (col) => col.notNull())
+        .addColumn("location", "varchar(255)", (col) => col.notNull())
+        .addColumn("industry", "varchar(255)", (col) => col.notNull())
         .addColumn("start_date", "date", (col) => col.notNull())
         .addColumn("end_date", "date", (col) => col.notNull())
         .execute();
