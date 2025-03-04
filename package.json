@@ -9,6 +9,7 @@
         "lint": "next lint",
         "db:generate": "drizzle-kit generate",
         "db:migrate": "drizzle-kit migrate",
+        "db:seed": "tsx src/db/seed.ts",
         "db:studio": "drizzle-kit studio",
         "db:drop": "drizzle-kit drop"
     },

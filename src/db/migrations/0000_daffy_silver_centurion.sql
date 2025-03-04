@@ -9,10 +9,12 @@ CREATE TABLE `experience` (
 	`created_at` text DEFAULT (CURRENT_TIMESTAMP) NOT NULL
 );
 --> statement-breakpoint
+CREATE UNIQUE INDEX `experience_idx` ON `experience` (`company`,`start_date`);--> statement-breakpoint
 CREATE TABLE `project` (
 	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
 	`title` text(255) NOT NULL,
 	`description` text(1023) NOT NULL,
 	`image_url` text(1023) NOT NULL,
+	`project_url` text(1023) NOT NULL,
 	`created_at` text DEFAULT (CURRENT_TIMESTAMP) NOT NULL
 );

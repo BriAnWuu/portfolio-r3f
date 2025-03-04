@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "3e9c86da-98a5-4020-967b-64a8e5c110b7",
+  "id": "c92006b0-8e29-45b0-812c-94461f458775",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "experience": {
@@ -65,7 +65,16 @@
           "default": "(CURRENT_TIMESTAMP)"
         }
       },
-      "indexes": {},
+      "indexes": {
+        "experience_idx": {
+          "name": "experience_idx",
+          "columns": [
+            "company",
+            "start_date"
+          ],
+          "isUnique": true
+        }
+      },
       "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {},
@@ -97,6 +106,13 @@
         },
         "image_url": {
           "name": "image_url",
+          "type": "text(1023)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "project_url": {
+          "name": "project_url",
           "type": "text(1023)",
           "primaryKey": false,
           "notNull": true,
