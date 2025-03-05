@@ -9,7 +9,7 @@ export default function Home() {
     return (
         <main className="w-screen h-fit flex flex-col gap-8 items-center">
             <Hero />
-            <div className="relative w-full h-[300vh] flex flex-col items-center">
+            <div className="relative w-full h-fit flex flex-col items-center">
                 <ColorChangePrompt />
                 <div className="sticky top-0 w-full h-screen z-0">
                     <Scene />

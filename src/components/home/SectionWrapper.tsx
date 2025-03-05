@@ -25,7 +25,7 @@ export default function SectionWrapper({ children }: { children: ReactNode }) {
 
     return (
         <motion.section
-            className={`w-[80%] flex flex-col`}
+            className={`w-[90%] flex flex-col`}
             variants={variants}
             initial="initial"
             whileInView="inView"
