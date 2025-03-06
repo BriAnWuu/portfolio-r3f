@@ -57,8 +57,8 @@ async function seed() {
                 company: "AGTOP Technology, Inc",
                 location: "Taipei, Taiwan",
                 industry: "Technology",
-                startDate: new Date("2018-07-01"),
-                endDate: new Date("2018-08-31"),
+                startDate: new Date("2018-07-02"),
+                endDate: new Date("2018-08-30"),
             },
             {
                 id: 2,
@@ -66,8 +66,8 @@ async function seed() {
                 company: "RCEVI, Chang Gung University",
                 location: "Taoyuan, Taiwan",
                 industry: "Research",
-                startDate: new Date("2020-08-01"),
-                endDate: new Date("2021-05-31"),
+                startDate: new Date("2020-08-02"),
+                endDate: new Date("2021-05-30"),
             },
         ])
         .returning({

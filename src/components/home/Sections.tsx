@@ -1,4 +1,5 @@
 import TechIcons from "../TechIcons";
+import Experiences from "./Experiences";
 import Projects from "./Projects";
 
 const textColor = "text-gray-200";
@@ -53,8 +54,7 @@ export function ExperienceSection() {
     return (
         <>
             <h3 className={titleClass}>Experience</h3>
-            <p className={paragraphClass}>I'm body paragraph box 1</p>
-            <p className={paragraphClass}>I'm body paragraph box 2</p>
+            <Experiences />
         </>
     );
 }
