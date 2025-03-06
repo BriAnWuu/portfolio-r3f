@@ -34,7 +34,7 @@ async function seed() {
             },
             {
                 id: 4,
-                title: "Financial Risk Management",
+                title: "Financial Risk Mgt",
                 description:
                     "A project from my quant finance degree, just to showcase a different aspect of my life as a software engineer. This project demonstrates the quantitative risks of financial assets, how to measure and mitigate them.",
                 imageUrl: "/images/project/financial-risk-management.jpg",

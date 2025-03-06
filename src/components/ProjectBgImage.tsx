@@ -1,3 +1,4 @@
+import { isValidImage } from "@/utils/ImagePreFetch";
 import { getImageProps } from "next/image";
 
 type Props = {
@@ -5,20 +6,23 @@ type Props = {
     alt: string;
 };
 
-export default function ProjectBgImage({ src, alt }: Props) {
+export default async function ProjectBgImage({ src, alt }: Props) {
+    const valid = await isValidImage(src);
+    const imageUrl = valid ? src : "/images/Brian_Wu.jpg";
+
     const {
         props: { srcSet },
     } = getImageProps({
         alt: alt,
         width: 128,
         height: 128,
-        src: src,
+        src: imageUrl,
     });
     const projectImage = getBackgroundImage(srcSet);
 
     return (
         <div
-            className="w-full h-full rounded-lg flex bg-cover bg-center bg-top bg-no-repeat mask-gradient hover:scale-125 transition ease-in"
+            className="w-full h-full rounded-lg flex bg-cover bg-center bg-top bg-no-repeat hover:scale-125 transition ease-in"
             style={{ backgroundImage: projectImage }}
         />
     );

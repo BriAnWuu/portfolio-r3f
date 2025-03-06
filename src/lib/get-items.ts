@@ -11,7 +11,7 @@ import { asc, desc } from "drizzle-orm";
 
 export async function getProjects(
     size = 4
-): Promise<Array<Partial<SelectProject>>> {
+): Promise<Array<Omit<SelectProject, "createdAt">>> {
     const projects = await db
         .select({
             id: ProjectTable.id,
@@ -27,7 +27,7 @@ export async function getProjects(
 }
 
 export async function getExperiences(): Promise<
-    Array<Partial<SelectExperience>>
+    Array<Omit<SelectExperience, "createdAt">>
 > {
     const experiences = await db
         .select({

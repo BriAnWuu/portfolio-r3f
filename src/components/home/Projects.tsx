@@ -5,10 +5,10 @@ export default async function Projects({}) {
     const projects = await getProjects();
 
     return (
-        <div className="w-full flex gap-4">
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
+        <div className="w-full flex flex-wrap gap-4">
+            {projects.map((project) => (
+                <ProjectCard key={project.id} {...project} />
+            ))}
         </div>
     );
 }

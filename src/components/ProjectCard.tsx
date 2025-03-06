@@ -1,17 +1,33 @@
+import { Suspense } from "react";
 import ProjectBgImage from "./ProjectBgImage";
+import { ExternalLinkLogo } from "./SocialLogos";
 
-export default function ProjectCard({}) {
+type Props = {
+    id: number;
+    title: string;
+    description: string;
+    imageUrl: string;
+    projectUrl: string;
+};
+
+const LINK_SIZE = 18;
+
+export default function ProjectCard(project: Props) {
     return (
-        // set width height
-        <article className="relative w-full h-[300px] flex flex-col bg-gray-700 opacity-95 rounded-lg overflow-hidden">
-            <ProjectBgImage src="/images/Brian_Wu.jpg" alt="example image" />
-            <section className="absolute bottom-4 w-auto h-[40%] flex flex-col bg-gray-700 px-4">
-                <h4 className="text-md mb-2">project title</h4>
-                <p className="text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor
-                </p>
-                <div className="links"></div>
+        <article className="relative w-[32%] h-[350px] flex flex-col bg-gray-700 opacity-95 rounded-lg overflow-hidden">
+            <Suspense fallback={<div>loading...</div>}>
+                <ProjectBgImage src={project.imageUrl} alt={project.title} />
+            </Suspense>
+
+            <section className="absolute bottom-0 w-auto h-[55%] flex flex-col bg-gray-700 shadow-[0_0_4rem_6rem] shadow-gray-700 px-4 pb-4">
+                <h4 className="text-md mb-2">{project.title}</h4>
+                <p className="text-xs">{project.description}</p>
+                <div className="w-full justify-self-end flex justify-end mt-auto">
+                    <ExternalLinkLogo
+                        size={LINK_SIZE}
+                        url={project.projectUrl}
+                    />
+                </div>
             </section>
         </article>
     );
