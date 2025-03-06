@@ -10,7 +10,7 @@ import {
 import { asc, desc } from "drizzle-orm";
 
 export async function getProjects(
-    size = 4
+    size = 6
 ): Promise<Array<Omit<SelectProject, "createdAt">>> {
     const projects = await db
         .select({

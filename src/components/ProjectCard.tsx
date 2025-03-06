@@ -15,9 +15,7 @@ const LINK_SIZE = 18;
 export default function ProjectCard(project: Props) {
     return (
         <article className="relative w-[32%] h-[350px] flex flex-col bg-gray-700 opacity-95 rounded-lg overflow-hidden">
-            <Suspense fallback={<div>loading...</div>}>
-                <ProjectBgImage src={project.imageUrl} alt={project.title} />
-            </Suspense>
+            <ProjectBgImage src={project.imageUrl} alt={project.title} />
 
             <section className="absolute bottom-0 w-auto h-[55%] flex flex-col bg-gray-700 shadow-[0_0_4rem_6rem] shadow-gray-700 px-4 pb-4">
                 <h4 className="text-md mb-2">{project.title}</h4>

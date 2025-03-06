@@ -13,7 +13,7 @@ async function seed() {
                 title: "Magnum Opus",
                 description:
                     "Magnum Opus is your favourite art auction platform for discovering great craftsmanship, creativity, and vision. Magnum Opus connects you with art that inspires and endures. Discover, bid, and own a piece of the extraordinary.",
-                imageUrl: "/images/project/magnum-opus.jpg",
+                imageUrl: "/images/project/magnum-opus.webp",
                 projectUrl: "https://github.com/BriAnWuu/magnum-opus",
             },
             {
