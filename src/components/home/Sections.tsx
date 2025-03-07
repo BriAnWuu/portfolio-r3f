@@ -7,7 +7,7 @@ const accentTextColor = "text-white";
 
 const titleClass = `text-xl ${textColor} mb-4`;
 const paragraphClass = `text-md ${textColor} mb-2`;
-const strongClass = `${accentTextColor}`;
+const strongClass = `text-lg ${accentTextColor}`;
 
 export function AboutSection() {
     return (
@@ -54,7 +54,10 @@ export function ExperienceSection() {
     return (
         <>
             <h3 className={titleClass}>Experience</h3>
-            <Experiences />
+            <Experiences
+                paragraphStyle={paragraphClass}
+                strongStyle={strongClass}
+            />
         </>
     );
 }
