@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+import { ProjectsSkeleton } from "../Skeletons";
 import TechIcons from "../TechIcons";
 import Experiences from "./Experiences";
 import Projects from "./Projects";
@@ -45,7 +47,9 @@ export function WorkSection() {
     return (
         <>
             <h3 className={titleClass}>Work</h3>
-            <Projects />
+            <Suspense fallback={<ProjectsSkeleton />}>
+                <Projects />
+            </Suspense>
         </>
     );
 }

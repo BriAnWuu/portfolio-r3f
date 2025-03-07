@@ -12,6 +12,8 @@ import { asc, desc } from "drizzle-orm";
 export async function getProjects(
     size = 6
 ): Promise<Array<Omit<SelectProject, "createdAt">>> {
+    // test skeleton
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
     const projects = await db
         .select({
             id: ProjectTable.id,
