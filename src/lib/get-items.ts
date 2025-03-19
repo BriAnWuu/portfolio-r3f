@@ -7,7 +7,7 @@ import {
     SelectExperience,
     SelectProject,
 } from "@/db/schema";
-import { asc, desc } from "drizzle-orm";
+import { asc, desc, eq } from "drizzle-orm";
 
 export async function getProjects(
     size = 6
@@ -44,4 +44,20 @@ export async function getExperiences(): Promise<
         .from(ExperienceTalbe)
         .orderBy(desc(ExperienceTalbe.startDate));
     return experiences;
+}
+
+export async function getProjectById(
+    id: SelectProject["id"]
+): Promise<Omit<SelectProject, "createdAt"> | undefined> {
+    const project = await db
+        .select({
+            id: ProjectTable.id,
+            title: ProjectTable.title,
+            description: ProjectTable.description,
+            imageUrl: ProjectTable.imageUrl,
+            projectUrl: ProjectTable.projectUrl,
+        })
+        .from(ProjectTable)
+        .where(eq(ProjectTable.id, id));
+    return project[0];
 }
