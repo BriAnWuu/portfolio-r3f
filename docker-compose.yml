@@ -1,0 +1,14 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: portfolio-r3f
+        image: portfolio-r3f
+        ports:
+            - "3000:3000"
+        # volumes:
+        #     - .:/app
+        #     - /app/node_modules
+        #     - /app/.next
+        env_file: .env
