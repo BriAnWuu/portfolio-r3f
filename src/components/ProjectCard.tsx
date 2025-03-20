@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import ProjectBgImage from "./ProjectBgImage";
 import { ExternalLinkLogo } from "./ProjectLinks";
 

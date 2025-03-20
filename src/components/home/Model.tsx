@@ -1,16 +1,25 @@
 import { getRandomColor } from "@/utils/RandomColor";
-import { useFrame, useThree } from "@react-three/fiber";
+import { useFrame, useThree, Vector3 } from "@react-three/fiber";
 import { useRef, useState } from "react";
+import { Mesh } from "three";
+
+type TorusKnotArgs = [
+    radius?: number,
+    tube?: number,
+    tubularSegments?: number,
+    radialSegments?: number,
+    p?: number,
+    q?: number
+];
 
 type Props = {
-    // figure out their types later :)
-    position?: any;
-    size?: any;
+    position?: Vector3;
+    size: TorusKnotArgs;
     color?: string;
 };
 
-const TorusKnot = ({ position = [0, 0, 0], size = [1, 1, 1, 1] }: Props) => {
-    const ref = useRef(null);
+const TorusKnot = ({ position = [0, 0, 0], size = [] }: Props) => {
+    const ref = useRef<Mesh | null>(null);
 
     const [color, setColor] = useState("orange");
     const [hovered, setHovered] = useState(false);
@@ -18,8 +27,8 @@ const TorusKnot = ({ position = [0, 0, 0], size = [1, 1, 1, 1] }: Props) => {
 
     useFrame((state, delta) => {
         const speed = hovered ? 0.5 : 1;
-        ref.current.rotation.x += delta * speed;
-        ref.current.position.z = Math.sin(state.clock.elapsedTime) * 1.5;
+        ref.current!.rotation.x += delta * speed;
+        ref.current!.position.z = Math.sin(state.clock.elapsedTime) * 1.5;
     });
 
     return (
@@ -49,7 +58,7 @@ export default function Model() {
 
     return (
         <group position={[0, 0, -5]} scale={viewport.width / 3}>
-            <TorusKnot size={[0.5, 0.1, 100, 16]} />
+            <TorusKnot size={[0.5, 0.1, 100, 16, 2, 3]} />
         </group>
     );
 }
